@@ -1,0 +1,28 @@
+<HTML>
+・CSS読み込み
+・JS読み込み
+・A～Zのユーザー追加
+・「チーム編成」の文字にスタイル適用
+・「createform」にスタイル適用
+・「数字の入力項目」にスタイル適用
+
+<CSS>
+fieldset 高さ：10em、 要素のはみだし：自動、背景色：ホワイトスモーク
+title 中央ぞろえ
+createForm 外側余白：10px、左揃え
+table 背景色：ライトブルー、外側余白：10px
+header 文字サイズ：大きい
+body 背景色：アズール
+
+<JS>
+headerとbodyにスタイル適用
+テーブル削除のメソッド作成
+・ヒント　テーブル要素.remove()
+
+const element = 'table'というタグすべてを取得; 
+if(element.length != 0){
+    element.forEach(item => {
+        リムーブ
+    });
+}
+
