@@ -1,27 +1,29 @@
 fieldset{
-
+    height: 10em;
+    overflow: auto;
+    background-color: whitesmoke;
 }
 
 .title{
-
+    text-align: center;
 }
 
 .createForm{
-
+    margin: 0px 10px;
 }
 
 .table{
-
+    background-color: lightblue;
+    margin: 0px 10px;
 }
 
 .header{
-
+    font-size: large;
 }
 
 .body{
-
+    background-color: azure;
 }
 
 .number{
-
 }
