@@ -14,7 +14,7 @@ fieldset{
 
 .table{
     background-color: lightblue;
-    margin: 0px 10px;
+    margin: 0px 20px;
 }
 
 .header{
@@ -27,4 +27,12 @@ fieldset{
 
 .number{
     width: 40px;
+}
+
+.bt{
+    margin-bottom: 10px;
+}
+
+.tables{
+    display: flex;
 }
