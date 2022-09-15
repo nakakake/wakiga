@@ -111,7 +111,8 @@
             table.append(thead);
             table.append(tbody);
             table.setAttribute( "class", "table" );
-
+            thead.setAttribute("class", "header");
+            tbody.setAttribute("class", "body");
             tables.append(table); 
         });
     }
@@ -122,7 +123,12 @@
      *  */
     function deleteTableElement() {
         // テーブルが作成されている場合削除
-
+        const element = document.querySelectorAll('table');
+        if(element.length != 0){
+            element.forEach(item => {
+                item.remove();
+            });
+        }
     }
 
     // #endregion メソッド
