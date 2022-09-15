@@ -5,6 +5,9 @@
     const createForm = doc.querySelector( "[name=createForm]" );
     const map = new Map();
     const rmap = new Map();
+    const all = document.querySelector("#all");
+    const release = document.querySelector("#release")
+    let checkflag = false;
 
     // #region メソッド
 
@@ -111,10 +114,13 @@
             table.append(thead);
             table.append(tbody);
             table.setAttribute( "class", "table" );
-
+            thead.setAttribute("class", "header");
+            tbody.setAttribute("class", "body");
             tables.append(table); 
         });
     }
+    
+    
 
     /***
      * テーブル要素削除
@@ -122,7 +128,12 @@
      *  */
     function deleteTableElement() {
         // テーブルが作成されている場合削除
-
+        const element = document.querySelectorAll('table');
+        if(element.length != 0){
+            element.forEach(item => {
+                item.remove();
+            });
+        }
     }
 
     // #endregion メソッド
@@ -159,4 +170,22 @@
     // #endregion 作成ボタンクリック時の処理
     
     // #endregion イベント
-  }
+
+    //全チェック全解除処理
+    function chengeAllcheck(checkBoxItems, checkflag){
+        checkBoxItems.forEach(checkBoxItem => {
+            let checkBox = checkBoxItem.querySelector( "input" );
+            checkBox.checked = checkflag;
+        });
+    }
+    all.onclick = function() {
+        checkflag = true;
+        chengeAllcheck(checkBoxItems, checkflag);
+    }
+
+    release.onclick = function() {
+        checkflag = false;
+        chengeAllcheck(checkBoxItems, checkflag);
+    }
+    
+}
