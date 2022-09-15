@@ -7,7 +7,6 @@
     const rmap = new Map();
     const all = document.querySelector("#all");
     const release = document.querySelector("#release")
-    let checkflag = false;
 
     // #region メソッド
 
@@ -178,14 +177,16 @@
             checkBox.checked = checkflag;
         });
     }
-    all.onclick = function() {
-        checkflag = true;
-        chengeAllcheck(checkBoxItems, checkflag);
+    all.onclick = (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        chengeAllcheck(user, true);
     }
 
-    release.onclick = function() {
-        checkflag = false;
-        chengeAllcheck(checkBoxItems, checkflag);
+    release.onclick = (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        chengeAllcheck(user, false);
     }
     
 }
